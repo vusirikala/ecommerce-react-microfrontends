@@ -11,7 +11,7 @@ module.exports = {
             name: 'products',
             filename: 'remoteEntry.js',
             exposes: {
-                './ProductsIndex': './src/index'
+                './ProductsIndex': './src/index'    //We will expose a module called ProductsIndex. When a client asks for ProductIndex, the webpack will return src/Index. 
             }
         }),
         new HtmlWebpackPlugin({
