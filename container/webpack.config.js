@@ -10,7 +10,8 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
-                productsApp: 'products@http://localhost:8081/remoteEntry.js'    //The remote webpack.config.js file should contain a Module Federation with name set to "products"
+                productsApp: 'products@http://localhost:8081/remoteEntry.js',    //The remote webpack.config.js file should contain a Module Federation with name set to "products"
+                cartApp: 'cart@http://localhost:8082/remoteEntry.js'
             }
         }),
         new HtmlWebpackPlugin({
